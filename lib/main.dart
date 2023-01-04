@@ -28,7 +28,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   int count = 0;
 
   @override
@@ -55,18 +54,32 @@ class _MyHomePageState extends State<MyHomePage> {
                 fontSize: 70,
               ),
             ),
+            ElevatedButton(
+              onPressed: () {
+                print('ElevatedButton');
+              },
+              child: Text('ElevatedButton'),
+            ),
+            TextButton(
+              onPressed: () {},
+              child: Text('TextButton'),
+            ),
+            OutlinedButton(
+              onPressed: () {},
+              child: Text('OutlinedButton'),
+            ),
+
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // 화면 갱신
-          setState((){
-            count++;
-          });
-        },
-        child: Icon(Icons.add)
-      ),
+          onPressed: () {
+            // 화면 갱신
+            setState(() {
+              count++;
+            });
+          },
+          child: Icon(Icons.add)),
     );
   }
 }
