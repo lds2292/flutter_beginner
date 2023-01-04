@@ -42,10 +42,10 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              '$count',
+              '숫자',
               style: TextStyle(
-                color: Colors.red,
-                fontSize: 70,
+                color: Colors.black,
+                fontSize: 40,
               ),
             ),
             Text(
