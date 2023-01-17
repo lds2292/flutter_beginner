@@ -57,6 +57,18 @@ class _MainPageState extends State<MainPage> {
                 print(text);
               },
             ),
+            Image.network(
+              'https://avatars.githubusercontent.com/u/37198141?v=4',
+              width: 200,
+              height: 100,
+              fit: BoxFit.cover,
+            ),
+            Image.asset(
+                'assets/img.jpg',
+              width: 300,
+              height: 100,
+              fit: BoxFit.cover,
+            ),
           ],
         ),
       ),
