@@ -20,6 +20,11 @@ class _MainPageState extends State<MainPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Container(
+              color: Colors.red,
+              width: 100,
+              height: 100,
+            ),
             Text(
               '숫자',
               style: TextStyle(
@@ -59,15 +64,21 @@ class _MainPageState extends State<MainPage> {
             ),
             Image.network(
               'https://avatars.githubusercontent.com/u/37198141?v=4',
-              width: 200,
+              width: 100,
               height: 100,
               fit: BoxFit.cover,
             ),
-            Image.asset(
-                'assets/img.jpg',
-              width: 300,
-              height: 100,
-              fit: BoxFit.cover,
+            Container(
+              color: Colors.red,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Image.asset(
+                    'assets/img.jpg',
+                  width: 100,
+                  height: 100,
+                  fit: BoxFit.cover,
+                ),
+              ),
             ),
           ],
         ),
