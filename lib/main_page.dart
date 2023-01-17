@@ -48,7 +48,15 @@ class _MainPageState extends State<MainPage> {
               onPressed: () {},
               child: Text('OutlinedButton'),
             ),
-
+            TextField(
+              decoration: InputDecoration(
+                labelText: '글자',
+                border: OutlineInputBorder(),
+              ),
+              onChanged: (text){
+                print(text);
+              },
+            ),
           ],
         ),
       ),
