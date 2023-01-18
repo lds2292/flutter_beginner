@@ -10,6 +10,8 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   int count = 0;
 
+  String _text = '';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,13 +71,16 @@ class _MainPageState extends State<MainPage> {
                         border: OutlineInputBorder(),
                       ),
                       onChanged: (text) {
-                        print(text);
+                        _text = text;
+                        // print(text);
                       },
                     ),
                   ),
                   Expanded(
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        print(_text);
+                      },
                       child: Text('login'),
                     ),
                   ),
