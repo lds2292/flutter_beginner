@@ -12,6 +12,15 @@ class _MainPageState extends State<MainPage> {
 
   String _text = '';
 
+  final _textController = TextEditingController();
+
+
+  @override
+  void dispose() {
+    _textController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,20 +75,17 @@ class _MainPageState extends State<MainPage> {
                   Expanded(
                     flex: 3,
                     child: TextField(
+                      controller: _textController,
                       decoration: InputDecoration(
                         labelText: '글자',
                         border: OutlineInputBorder(),
                       ),
-                      onChanged: (text) {
-                        _text = text;
-                        // print(text);
-                      },
                     ),
                   ),
                   Expanded(
                     child: ElevatedButton(
                       onPressed: () {
-                        print(_text);
+                        print(_textController.text);
                       },
                       child: Text('login'),
                     ),
