@@ -26,8 +26,11 @@ class _MainPageState extends State<MainPage> {
                 width: 100,
                 height: 100,
               ),
-              SizedBox(height: 100 ),
-              Container(height: 30,color: Colors.blue,),
+              SizedBox(height: 100),
+              Container(
+                height: 30,
+                color: Colors.blue,
+              ),
               Text(
                 '숫자',
                 style: TextStyle(
@@ -56,14 +59,27 @@ class _MainPageState extends State<MainPage> {
                 onPressed: () {},
                 child: Text('OutlinedButton'),
               ),
-              TextField(
-                decoration: InputDecoration(
-                  labelText: '글자',
-                  border: OutlineInputBorder(),
-                ),
-                onChanged: (text){
-                  print(text);
-                },
+              Row(
+                children: [
+                  Expanded(
+                    flex: 3,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        labelText: '글자',
+                        border: OutlineInputBorder(),
+                      ),
+                      onChanged: (text) {
+                        print(text);
+                      },
+                    ),
+                  ),
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: Text('login'),
+                    ),
+                  ),
+                ],
               ),
               Image.network(
                 'https://avatars.githubusercontent.com/u/37198141?v=4',
@@ -76,7 +92,7 @@ class _MainPageState extends State<MainPage> {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Image.asset(
-                      'assets/img.jpg',
+                    'assets/img.jpg',
                     width: 100,
                     height: 100,
                     fit: BoxFit.cover,
