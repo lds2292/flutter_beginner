@@ -25,6 +25,8 @@ class _MainPageState extends State<MainPage> {
               width: 100,
               height: 100,
             ),
+            SizedBox(height: 30, ),
+            Container(height: 30,color: Colors.blue,),
             Text(
               '숫자',
               style: TextStyle(
